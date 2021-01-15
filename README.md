@@ -3,4 +3,5 @@ Feature :
 
 - Custom Validation
 - Custom Exception
+- Jpa Example
 
