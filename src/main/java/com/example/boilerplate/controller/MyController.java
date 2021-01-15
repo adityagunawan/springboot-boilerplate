@@ -23,6 +23,7 @@ public class MyController {
 
     @GetMapping(path = "/test-exception")
     public ResponseDto testException() throws BusinessException {
+        log.info("this test exception");
         if (true)
             throw new  BusinessException("01", "error gan");
 
@@ -31,6 +32,9 @@ public class MyController {
 
     @GetMapping(path = "/test-validation")
     public ResponseDto testValidation(@Valid @RequestBody RequestDto request) {
+        log.info("this test validation");
         return new ResponseDto(false, "00", "hello world");
     }
+
+
 }
